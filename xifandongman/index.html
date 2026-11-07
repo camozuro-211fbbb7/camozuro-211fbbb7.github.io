@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>稀饭动漫-追番推荐_新番更新与深度解析</title>
+<meta name="description" content="稀饭动漫是专注动漫内容聚合与追番推荐的专题站，提供新番更新追踪、口碑番剧解析、角色与制作亮点、分类筛选和社区评论，适合想找番、追更和补番的动漫爱好者收藏浏览。">
+<meta name="keywords" content="稀饭动漫,追番推荐,新番更新,动漫解析,番剧专题">
+<style>
+:root{
+  --bg:#f8f6f2;
+  --surface:#ffffff;
+  --surface-soft:#f3efe7;
+  --ink:#1e2b2c;
+  --ink-soft:#435e5e;
+  --muted:#7a8b8a;
+  --line:#e4ddd2;
+  --accent:#f06d4f;
+  --accent-soft:#fbe6df;
+  --accent-deep:#b84a30;
+  --sage:#3f7d6f;
+  --sage-soft:#e0f0ea;
+  --gold:#c9a86a;
+  --shadow:0 14px 34px rgba(30,43,44,.08);
+  --radius:18px;
+  --radius-sm:12px;
+  --max:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer;border:none;background:none}
+.w-site{max-width:var(--max);margin:0 auto;padding:0 20px}
+.w-site.is-flow{padding-bottom:56px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- 导航 ---------- */
+.top-bar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(248,246,242,.9);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.top-bar__inner{
+  display:flex;align-items:center;gap:28px;
+  padding:14px 0;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-weight:700;font-size:20px;letter-spacing:.5px;
+  flex-shrink:0;
+}
+.brand__mark{
+  width:38px;height:38px;border-radius:12px;
+  background:linear-gradient(140deg,var(--accent),#f5a87a);
+  display:grid;place-items:center;
+  color:#fff;font-size:17px;font-weight:800;
+  box-shadow:0 6px 14px rgba(240,109,79,.35);
+}
+.brand__sub{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:1px;display:block;line-height:1.2}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--ink-soft);font-weight:500}
+.nav-links a{padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+.nav-links a:hover{color:var(--accent);border-color:var(--accent)}
+.top-search{
+  margin-left:auto;display:flex;align-items:center;gap:8px;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:7px 14px;min-width:210px;
+}
+.top-search input{border:none;background:transparent;outline:none;font-size:13px;color:var(--ink);width:100%}
+.top-search input::placeholder{color:var(--muted)}
+.top-search span{font-size:14px;color:var(--muted)}
+
+/* ---------- Banner ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:54px 0 44px;
+  background:
+    radial-gradient(1000px 420px at 88% -10%, rgba(240,109,79,.18), transparent 70%),
+    radial-gradient(800px 400px at 6% 110%, rgba(63,125,111,.14), transparent 70%),
+    var(--surface-soft);
+  border-bottom:1px solid var(--line);
+}
+.hero__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.hero__eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent-soft);color:var(--accent-deep);
+  font-size:12px;font-weight:600;letter-spacing:.6px;
+  padding:6px 14px;border-radius:999px;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(30px,4.2vw,46px);
+  line-height:1.2;letter-spacing:-.5px;
+  font-weight:800;margin-bottom:16px;
+}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero__lead{font-size:15.5px;color:var(--ink-soft);max-width:530px;margin-bottom:24px}
+.hero-search{
+  display:flex;align-items:center;gap:10px;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:8px 8px 8px 20px;
+  box-shadow:var(--shadow);max-width:470px;margin-bottom:22px;
+}
+.hero-search input{flex:1;border:none;outline:none;font-size:14px;background:transparent;color:var(--ink)}
+.hero-search input::placeholder{color:var(--muted)}
+.hero-search button{
+  background:var(--accent);color:#fff;font-weight:600;font-size:14px;
+  padding:10px 24px;border-radius:999px;transition:.2s;
+}
+.hero-search button:hover{background:var(--accent-deep)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px}
+.hero-tags a{
+  font-size:13px;color:var(--ink-soft);
+  background:rgba(255,255,255,.7);
+  border:1px solid var(--line);border-radius:999px;
+  padding:7px 16px;transition:.2s;
+}
+.hero-tags a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hero-poster{
+  position:relative;border-radius:26px;overflow:hidden;
+  aspect-ratio:4/3.4;
+  background:
+    radial-gradient(circle at 30% 25%, #ffd9b0, transparent 55%),
+    radial-gradient(circle at 78% 72%, #b6dfd0, transparent 55%),
+    linear-gradient(150deg,#2e4a45,#1f3532 62%,#162624);
+  box-shadow:0 26px 50px rgba(22,38,36,.28);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:26px;color:#f7f4ec;
+}
+.hero-poster::before{
+  content:"番";position:absolute;top:16px;right:22px;
+  font-size:88px;font-weight:800;line-height:1;
+  color:rgba(255,255,255,.06);letter-spacing:-6px;
+}
+.hero-poster__label{font-size:12px;letter-spacing:2px;opacity:.7;margin-bottom:8px}
+.hero-poster__title{font-size:22px;font-weight:700;line-height:1.35;margin-bottom:10px}
+.hero-poster__meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px}
+.hero-poster__meta span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ---------- 通用区块 ---------- */
+.section{padding:46px 0 8px}
+.section__head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:18px;margin-bottom:26px;flex-wrap:wrap;
+}
+.section__title{
+  font-size:23px;font-weight:800;letter-spacing:-.3px;
+  display:flex;align-items:center;gap:12px;
+}
+.section__title::before{
+  content:"";width:5px;height:22px;border-radius:4px;
+  background:linear-gradient(var(--accent),var(--gold));
+}
+.section__desc{font-size:13.5px;color:var(--muted);max-width:560px}
+.pill{
+  display:inline-block;font-size:12px;font-weight:600;
+  padding:4px 11px;border-radius:999px;
+  background:var(--accent-soft);color:var(--accent-deep);
+}
+.pill--sage{background:var(--sage-soft);color:var(--sage)}
+.pill--gold{background:#f6edda;color:#96702f}
+
+/* ---------- 内容简介 ---------- */
+.intro-card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:34px 38px;
+  box-shadow:var(--shadow);
+  display:grid;grid-template-columns:1.4fr .6fr;gap:34px;
+}
+.intro-card p{font-size:15px;color:var(--ink-soft);margin-bottom:14px}
+.intro-card p:last-child{margin-bottom:0}
+.intro-side{
+  border-left:1px dashed var(--line);padding-left:34px;
+  display:flex;flex-direction:column;gap:16px;justify-content:center;
+}
+.intro-stat{display:flex;align-items:baseline;gap:8px}
+.intro-stat strong{font-size:26px;font-weight:800;color:var(--accent)}
+.intro-stat span{font-size:13px;color:var(--muted)}
+
+/* ---------- 推荐卡片网格 ---------- */
+.card-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.anime-card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 6px 18px rgba(30,43,44,.04);
+  transition:transform .22s,box-shadow .22s;
+  display:flex;flex-direction:column;
+}
+.anime-card:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(30,43,44,.12)}
+.anime-card__cover{
+  aspect-ratio:16/9;position:relative;
+  display:flex;align-items:flex-end;padding:14px;
+  color:#fff;font-weight:700;font-size:15px;line-height:1.35;
+}
+.anime-card__cover::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 35%,rgba(10,20,20,.65));
+}
+.anime-card__cover span{position:relative;z-index:1}
+.cover-1{background:linear-gradient(135deg,#3a7d70,#1f4a43)}
+.cover-2{background:linear-gradient(135deg,#f0976b,#c85533)}
+.cover-3{background:linear-gradient(135deg,#7a86c9,#434d8f)}
+.cover-4{background:linear-gradient(135deg,#d6a85f,#9b6a2c)}
+.cover-5{background:linear-gradient(135deg,#6fa6b8,#2f5c6b)}
+.cover-6{background:linear-gradient(135deg,#b46f8c,#6e3550)}
+.anime-card__body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.anime-card__title{font-size:16px;font-weight:700;line-height:1.4}
+.anime-card__desc{font-size:13px;color:var(--ink-soft);flex:1}
+.anime-card__tags{display:flex;flex-wrap:wrap;gap:6px}
+.anime-card__tags span{
+  font-size:11.5px;background:var(--surface-soft);color:var(--ink-soft);
+  padding:3px 9px;border-radius:999px;
+}
+.anime-card__foot{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:var(--muted);border-top:1px dashed var(--line);
+  padding-top:10px;
+}
+.anime-card__score{color:var(--accent);font-weight:700}
+
+/* ---------- 最新动态 ---------- */
+.update-list{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;
+}
+.update-item{
+  display:grid;grid-template-columns:120px 1fr auto;gap:18px;
+  padding:16px 24px;align-items:center;
+  border-bottom:1px solid var(--line);
+  transition:background .18s;
+}
+.update-item:last-child{border-bottom:none}
+.update-item:hover{background:var(--surface-soft)}
+.update-item__time{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.update-item__title{font-size:14.5px;font-weight:600}
+.update-item__title small{font-weight:400;color:var(--muted);font-size:12.5px;margin-left:6px}
+.update-item__tag{font-size:11.5px;padding:3px 10px;border-radius:999px;background:var(--sage-soft);color:var(--sage);white-space:nowrap}
+
+/* ---------- 分类入口 ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat-item{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:20px;
+  display:flex;flex-direction:column;gap:6px;
+  transition:.2s;box-shadow:0 4px 12px rgba(30,43,44,.03);
+}
+.cat-item:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 24px rgba(30,43,44,.09)}
+.cat-item strong{font-size:15px}
+.cat-item small{font-size:12.5px;color:var(--muted)}
+
+/* ---------- 深度解析 ---------- */
+.article-box{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:40px 44px;box-shadow:var(--shadow);
+}
+.article-box h3{
+  font-size:18.5px;font-weight:700;margin:26px 0 12px;color:var(--ink);
+  padding-left:14px;border-left:4px solid var(--accent);
+}
+.article-box h3:first-child{margin-top:0}
+.article-box p{font-size:15px;color:var(--ink-soft);margin-bottom:14px}
+.article-box ul{margin:0 0 16px 22px;color:var(--ink-soft);font-size:15px}
+.article-box li{margin-bottom:7px}
+.article-box .quote{
+  background:var(--surface-soft);border-radius:var(--radius-sm);
+  padding:18px 22px;font-size:14px;color:var(--ink-soft);
+  border-left:4px solid var(--gold);margin:18px 0;
+}
+
+/* ---------- 体验指南 ---------- */
+.guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.guide-card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px 24px;box-shadow:0 6px 16px rgba(30,43,44,.04);
+}
+.guide-card__num{
+  font-size:13px;font-weight:800;color:var(--accent);
+  background:var(--accent-soft);width:34px;height:34px;border-radius:50%;
+  display:grid;place-items:center;margin-bottom:14px;
+}
+.guide-card h4{font-size:16px;margin-bottom:8px}
+.guide-card p{font-size:13.5px;color:var(--muted)}
+
+/* ---------- FAQ ---------- */
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-sm);overflow:hidden;
+}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:18px 22px;
+  font-size:15px;font-weight:600;display:flex;justify-content:space-between;gap:16px;
+  align-items:center;transition:background .18s;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{background:var(--surface-soft)}
+.faq-item summary::after{
+  content:"+";font-size:20px;color:var(--accent);font-weight:400;line-height:1;
+  transition:transform .2s;
+}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item__body{padding:0 22px 20px;font-size:14px;color:var(--ink-soft)}
+
+/* ---------- 评论 ---------- */
+.comment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.comment-card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:18px 20px;
+}
+.comment-card__head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.avatar{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(140deg,var(--sage),#8bc0b0);
+  color:#fff;font-size:13px;font-weight:700;
+  display:grid;place-items:center;flex-shrink:0;
+}
+.comment-card__name{font-size:13.5px;font-weight:600}
+.comment-card__time{font-size:11.5px;color:var(--muted);margin-left:auto}
+.comment-card p{font-size:13.5px;color:var(--ink-soft)}
+
+/* ---------- 资讯 ---------- */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.news-card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:22px;
+  transition:.2s;display:flex;flex-direction:column;gap:9px;
+}
+.news-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.news-card__date{font-size:12px;color:var(--muted)}
+.news-card__title{font-size:15px;font-weight:700;line-height:1.45}
+.news-card__desc{font-size:13px;color:var(--ink-soft)}
+
+/* ---------- 订阅 ---------- */
+.subscribe{
+  margin-top:44px;padding:38px;border-radius:24px;
+  background:linear-gradient(135deg,#1f3532,#2e4a45);
+  color:#f4f1e8;display:flex;align-items:center;justify-content:space-between;
+  gap:28px;flex-wrap:wrap;
+}
+.subscribe h3{font-size:22px;margin-bottom:6px}
+.subscribe p{font-size:14px;opacity:.75}
+.subscribe form{display:flex;gap:10px;background:rgba(255,255,255,.1);padding:6px;border-radius:999px}
+.subscribe input{
+  border:none;outline:none;background:transparent;color:#fff;
+  padding:9px 18px;font-size:14px;min-width:200px;
+}
+.subscribe input::placeholder{color:rgba(255,255,255,.55)}
+.subscribe button{
+  background:var(--accent);color:#fff;font-weight:600;font-size:14px;
+  padding:10px 24px;border-radius:999px;
+}
+.subscribe button:hover{background:var(--accent-deep)}
+
+/* ---------- 页脚 ---------- */
+.site-footer{
+  margin-top:56px;border-top:1px solid var(--line);
+  background:var(--surface);padding:44px 0 30px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr .8fr .8fr .9fr;gap:32px;margin-bottom:30px}
+.footer-brand p{font-size:13px;color:var(--muted);margin-top:10px;max-width:280px}
+.footer-col h5{font-size:13.5px;font-weight:700;margin-bottom:12px}
+.footer-col a{display:block;font-size:13px;color:var(--muted);margin-bottom:8px;transition:.18s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{
+  border-top:1px solid var(--line);padding-top:20px;
+  font-size:12.5px;color:var(--muted);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .hero__grid{grid-template-columns:1fr}
+  .hero-poster{max-width:460px;aspect-ratio:16/9.5}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .guide-grid{grid-template-columns:repeat(2,1fr)}
+  .news-grid{grid-template-columns:repeat(2,1fr)}
+  .intro-card{grid-template-columns:1fr}
+  .intro-side{border-left:none;border-top:1px dashed var(--line);padding-left:0;padding-top:22px;flex-direction:row;flex-wrap:wrap;gap:24px}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .nav-links{display:none}
+  .top-search{min-width:0;flex:1}
+  .hero{padding:36px 0 32px}
+  .hero h1{font-size:29px}
+  .hero-poster{max-width:100%;aspect-ratio:16/10}
+  .section{padding:34px 0 4px}
+  .section__title{font-size:20px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .guide-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .comment-grid{grid-template-columns:1fr}
+  .update-item{grid-template-columns:1fr auto;gap:6px}
+  .update-item__time{grid-column:1/-1}
+  .article-box{padding:26px 22px}
+  .intro-card{padding:24px 22px}
+  .subscribe{padding:26px 22px}
+  .subscribe form{width:100%}
+  .subscribe input{min-width:0;flex:1}
+  .footer-grid{grid-template-columns:1fr;gap:22px}
+  .footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== 顶部导航 ========== -->
+<header class="top-bar">
+  <div class="w-site top-bar__inner">
+    <a class="brand" href="/#top">
+      <span class="brand__mark">稀</span>
+      <span>稀饭动漫<span class="brand__sub">XIFAN ANIME</span></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="/#hot">热门推荐</a>
+      <a href="/#updates">新番更新</a>
+      <a href="/#category">分类浏览</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">社区评论</a>
+      <a href="/#news">动漫资讯</a>
+    </nav>
+    <form class="top-search" onsubmit="return false" role="search">
+      <span>🔍</span>
+      <input type="search" placeholder="搜索番剧、角色、制作" aria-label="搜索番剧">
+    </form>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ========== 首屏 Banner ========== -->
+  <section class="hero" aria-label="首屏推荐">
+    <div class="w-site hero__grid">
+      <div>
+        <span class="hero__eyebrow">2026 秋季追番专题 · 持续更新</span>
+        <h1>稀饭动漫：追番推荐<em>与深度解析</em>一站看完</h1>
+        <p class="hero__lead">
+          从新番更新表到口碑番剧拆解，稀饭动漫把「看什么、追到哪、值不值得补」三件事整理在同一页里。<br>
+          按题材、制作、口碑和更新节奏筛选，适合想省时间找番的朋友收藏常看。
+        </p>
+        <form class="hero-search" onsubmit="return false" role="search">
+          <input type="search" placeholder="搜番名、角色、声优、制作公司…" aria-label="站内搜索">
+          <button type="button">开始找番</button>
+        </form>
+        <div class="hero-tags">
+          <a href="/#hot">新番速递</a>
+          <a href="/#hot">高分补番</a>
+          <a href="/#category">奇幻冒险</a>
+          <a href="/#category">日常治愈</a>
+          <a href="/#category">热血战斗</a>
+          <a href="/#updates">更新日历</a>
+          <a href="/#deep">制作解析</a>
+          <a href="/#comments">追番讨论</a>
+        </div>
+      </div>
+      <div class="hero-poster" aria-hidden="true">
+        <div class="hero-poster__label">本期焦点 · 编辑推荐</div>
+        <div class="hero-poster__title">浮岛邮差与风之信<br>第 7 话「迟到的回信」上线</div>
+        <div class="hero-poster__meta">
+          <span>奇幻日常</span><span>12 话</span><span>口碑 9.1</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-site is-flow">
+
+    <!-- ========== 内容简介 ========== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section__head">
+        <h2 class="section__title" id="about-title">稀饭动漫是做什么的</h2>
+        <p class="section__desc">一个围绕番剧内容消费整理的专题页，帮你在有限时间里筛出值得看的作品。</p>
+      </div>
+      <div class="intro-card">
+        <div>
+          <p>稀饭动漫面向的是这样一类观众：每季新番几十部，宣传图看得眼花，真正想知道的其实是「哪几部值得点开」「上一部追到第几集了」「这部老番现在补还来不来得及」。这个页面把新番更新、口碑评价、题材分类和制作信息放在一起，减少来回切换站点的麻烦。</p>
+          <p>我们更关注番剧的实际内容：故事节奏是否拖沓、角色塑造有没有立住、制作公司过往作品的水平如何、续作与原作之间的差异在哪里。对于刚入坑的观众，页面提供了按题材和观看门槛划分的入口；对于追更多年的老观众，更新列表和深度解析能快速对齐进度。</p>
+          <p>所有推荐内容都按照「看点 + 适合人群 + 更新状态」的结构呈现，方便快速判断。如果你习惯在通勤、午休或睡前看两集，这里的分类和评分可以作为筛选参考。页面内容会随季度新番和热门讨论持续补充，收藏后回访会有新的条目。</p>
+        </div>
+        <div class="intro-side">
+          <div class="intro-stat"><strong>120+</strong><span>本季收录番剧</span></div>
+          <div class="intro-stat"><strong>38</strong><span>深度解析条目</span></div>
+          <div class="intro-stat"><strong>每日</strong><span>更新追踪提醒</span></div>
+          <div class="intro-stat"><strong>9.1</strong><span>编辑推荐均分</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 热门推荐 ========== -->
+    <section class="section" id="hot" aria-labelledby="hot-title">
+      <div class="section__head">
+        <h2 class="section__title" id="hot-title">热门推荐 · 最近大家在追</h2>
+        <p class="section__desc">综合播放讨论度与编辑评分，优先收录节奏清晰、完成度高的作品。</p>
+      </div>
+      <div class="card-grid">
+        <article class="anime-card">
+          <div class="anime-card__cover cover-1"><span>浮岛邮差与风之信</span></div>
+          <div class="anime-card__body">
+            <h3 class="anime-card__title">浮岛邮差与风之信</h3>
+            <p class="anime-card__desc">单元剧结构，每集送一封信，情绪收得很稳。第 7 话开始进入主角身世线，适合喜欢慢热治愈的观众。</p>
+            <div class="anime-card__tags"><span>奇幻</span><span>日常</span><span>治愈</span></div>
+            <div class="anime-card__foot"><span>更新至第 7 话</span><span class="anime-card__score">9.1</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-card__cover cover-2"><span>赤刃列车</span></div>
+          <div class="anime-card__body">
+            <h3 class="anime-card__title">赤刃列车</h3>
+            <p class="anime-card__desc">封闭空间群像战斗，作画密度高，打戏分镜干脆。前 3 集节奏偏快，建议连着看更容易进入状态。</p>
+            <div class="anime-card__tags"><span>热血</span><span>战斗</span><span>群像</span></div>
+            <div class="anime-card__foot"><span>更新至第 9 话</span><span class="anime-card__score">8.8</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-card__cover cover-3"><span>星屑观测日记</span></div>
+          <div class="anime-card__body">
+            <h3 class="anime-card__title">星屑观测日记</h3>
+            <p class="anime-card__desc">天文社题材，画面干净，配乐存在感强。剧情推进偏日常，适合当睡前番，单集 24 分钟不压人。</p>
+            <div class="anime-card__tags"><span>校园</span><span>青春</span><span>音乐</span></div>
+            <div class="anime-card__foot"><span>更新至第 6 话</span><span class="anime-card__score">8.6</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-card__cover cover-4"><span>炉火与旧书店</span></div>
+          <div class="anime-card__body">
+            <h3 class="anime-card__title">炉火与旧书店</h3>
+            <p class="anime-card__desc">温情系短篇集，每话一个客人故事。书店设定用得很扎实，台词质量高于同类型平均水平。</p>
+            <div class="anime-card__tags"><span>治愈</span><span>短篇</span><span>生活</span></div>
+            <div class="anime-card__foot"><span>全 10 话已完结</span><span class="anime-card__score">8.9</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-card__cover cover-5"><span>雾港调查录</span></div>
+          <div class="anime-card__body">
+            <h3 class="anime-card__title">雾港调查录</h3>
+            <p class="anime-card__desc">悬疑推理线铺得细，前两集信息量大，建议专心看。角色动机交代清楚，适合喜欢逐集扒细节的观众。</p>
+            <div class="anime-card__tags"><span>悬疑</span><span>推理</span><span>都市</span></div>
+            <div class="anime-card__foot"><span>更新至第 5 话</span><span class="anime-card__score">8.7</span></div>
+          </div>
+        </article>
+        <article class="anime-card">
+          <div class="anime-card__cover cover-6"><span>花与剑的回声</span></div>
+          <div class="anime-card__body">
+            <h3 class="anime-card__title">花与剑的回声</h3>
+            <p class="anime-card__desc">古风奇幻，美术风格辨识度高。感情线推进较慢，动作戏集中在后半段，适合看重氛围的观众。</p>
+            <div class="anime-card__tags"><span>古风</span><span>奇幻</span><span>情感</span></div>
+            <div class="anime-card__foot"><span>更新至第 8 话</span><span class="anime-card__score">8.4</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 最新更新 ========== -->
+    <section class="section" id="updates" aria-labelledby="updates-title">
+      <div class="section__head">
+        <h2 class="section__title" id="updates-title">最新更新 · 今日追更列表</h2>
+        <p class="section__desc">按上线时间排序，标注集数与进度，方便核对追到哪一集。</p>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-item__time">2026-11-07 20:00</span>
+          <span class="update-item__title">浮岛邮差与风之信<small>第 7 话「迟到的回信」已上线</small></span>
+          <span class="update-item__tag">奇幻日常</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-07 18:30</span>
+          <span class="update-item__title">赤刃列车<small>第 9 话「隧道尽头」更新，打戏密度提升</small></span>
+          <span class="update-item__tag">热血战斗</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-06 22:00</span>
+          <span class="update-item__title">雾港调查录<small>第 5 话「雨夜证词」上线，新增一条线索</small></span>
+          <span class="update-item__tag">悬疑推理</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-06 12:00</span>
+          <span class="update-item__title">星屑观测日记<small>第 6 话更新，插入一段新配乐</small></span>
+          <span class="update-item__tag">校园青春</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-05 21:00</span>
+          <span class="update-item__title">花与剑的回声<small>第 8 话「旧誓」上线，感情线推进</small></span>
+          <span class="update-item__tag">古风奇幻</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-05 19:00</span>
+          <span class="update-item__title">炉火与旧书店<small>全 10 话完结，最终话评价走高</small></span>
+          <span class="update-item__tag">治愈短篇</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-04 20:30</span>
+          <span class="update-item__title">风蚀之塔<small>第 4 话更新，世界观说明集中展开</small></span>
+          <span class="update-item__tag">冒险</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-04 10:00</span>
+          <span class="update-item__title">街角甜品部<small>第 11 话上线，日常向收尾</small></span>
+          <span class="update-item__tag">日常</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-03 21:00</span>
+          <span class="update-item__title">深蓝回声<small>第 2 话开播，新番首周口碑观察中</small></span>
+          <span class="update-item__tag">科幻</span>
+        </div>
+        <div class="update-item">
+          <span class="update-item__time">2026-11-03 09:00</span>
+          <span class="update-item__title">纸飞机计划<small>第 9 话更新，回忆篇插入</small></span>
+          <span class="update-item__tag">青春成长</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 分类入口 ========== -->
+    <section class="section" id="category" aria-labelledby="category-title">
+      <div class="section__head">
+        <h2 class="section__title" id="category-title">分类浏览 · 按题材找番</h2>
+        <p class="section__desc">八个常见题材入口，每个分类下按口碑和更新状态排序。</p>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#hot"><strong>奇幻冒险</strong><small>架空世界与旅途故事</small></a>
+        <a class="cat-item" href="/#hot"><strong>热血战斗</strong><small>高密度作画与群像对抗</small></a>
+        <a class="cat-item" href="/#hot"><strong>日常治愈</strong><small>慢节奏、情绪稳定</small></a>
+        <a class="cat-item" href="/#hot"><strong>悬疑推理</strong><small>线索铺陈与反转结构</small></a>
+        <a class="cat-item" href="/#hot"><strong>校园青春</strong><small>成长与社团群像</small></a>
+        <a class="cat-item" href="/#hot"><strong>古风东方</strong><small>美术风格与情感线并重</small></a>
+        <a class="cat-item" href="/#hot"><strong>科幻设定</strong><small>世界观先行、信息量大</small></a>
+        <a class="cat-item" href="/#hot"><strong>短篇合集</strong><small>单话完成、适合碎片时间</small></a>
+      </div>
+    </section>
+
+    <!-- ========== 深度解析 ========== -->
+    <section class="section" id="deep" aria-labelledby="deep-title">
+      <div class="section__head">
+        <h2 class="section__title" id="deep-title">深度解析 · 本季番剧怎么挑</h2>
+        <p class="section__desc">从题材、节奏、制作和受众四个角度，拆解稀饭动漫的推荐逻辑。</p>
+      </div>
+      <div class="article-box">
+        <h3>题材不是唯一标准，节奏更影响观看体验</h3>
+        <p>很多观众搜「稀饭动漫」时，其实已经过了「随便点开一部看」的阶段，更想知道这部剧的节奏适不适合自己的时间安排。同样是奇幻题材，有的作品前两集就把世界观铺满，信息密度高、需要专注；有的作品用单元剧慢慢带出主线，通勤时看一集也不会有负担。本页在推荐卡片里标注了更新集数和短评，就是为了让节奏差异先被看见。</p>
+        <p>以《浮岛邮差与风之信》为例，它每集围绕一封信展开，第七话才开始收拢主角身世线。这种结构对补番观众很友好，中断几天再回来也能接上。相对地，《赤刃列车》属于封闭空间群像战斗，前三集人物集中登场，如果隔太久不看容易记混角色，更适合连着追。</p>
+
+        <h3>制作公司与画面稳定度值得单独看</h3>
+        <p>番剧的作画质量并不只看宣传 PV。动作戏是否有层次、人物远景是否崩坏、背景美术是否复用过多，这些会直接影响连续观看的耐心。稀饭动漫在深度解析里会标注制作公司的过往作品特点，比如擅长日常演技作画，还是强于大场面调度。对于看重画面的观众，这个信息比评分更实用。</p>
+        <div class="quote">建议：如果一部番的评价集中在「作画好、剧情平」，可以把它当作画面向作品，在空闲时看；如果评价是「剧情稳、制作一般」，则更适合看重故事的人。</div>
+
+        <h3>角色塑造决定能不能追下去</h3>
+        <p>本季讨论度较高的几部作品，共同点是主角动机清楚，配角不是工具人。《雾港调查录》用五话篇幅立住了调查搭档之间的信任关系；《花与剑的回声》则把情感推进藏在动作戏之后的静场里。稀饭动漫在角色分析部分会写清楚人物弧光出现在哪几话，方便大家判断是否值得投入时间。</p>
+        <p>反过来，如果一部作品的角色行为只服务于剧情反转，人物逻辑会被牺牲，这类作品通常在中期评价下滑。页面里的评论模块和资讯流会持续记录这种变化，追更观众可以据此调整顺序。</p>
+
+        <h3>适合人群与补番顺序</h3>
+        <p>新入坑的观众建议先从短篇合集或日常治愈类入手，单集完成度高，不依赖前情；追更多年的观众可以直接看更新列表和深度解析，用集数定位进度。对于想补老番的朋友，稀饭动漫会在延伸阅读里标注作品是否适合连看、是否有剧场版前置、以及不同版本的观看差异。</p>
+        <p>最后，评分只是参考。同一部番在不同观众那里可能得到完全相反的反馈，页面保留评论区的多元声音，也是希望推荐不只是一种口径。找番这件事，最终还是要回到自己的观看习惯上。</p>
+      </div>
+    </section>
+
+    <!-- ========== 体验指南 ========== -->
+    <section class="section" id="guide" aria-labelledby="guide-title">
+      <div class="section__head">
+        <h2 class="section__title" id="guide-title">浏览体验指南</h2>
+        <p class="section__desc">页面结构按追番流程组织，尽量少翻页、少跳转。</p>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-card__num">01</div>
+          <h4>结构清晰，分区明确</h4>
+          <p>热门推荐、更新列表、分类和解析各自独立，滚动时不会混在一起，找信息更快。</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-card__num">02</div>
+          <h4>筛选方便，标签统一</h4>
+          <p>题材、更新状态、评分都做成统一标签，横向对比几部番时不容易看花眼。</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-card__num">03</div>
+          <h4>移动端阅读友好</h4>
+          <p>手机端自动切换单列布局，卡片和评论不会挤在一起，通勤时刷更新列表比较顺手。</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-card__num">04</div>
+          <h4>适合追更与收藏</h4>
+          <p>更新列表按时间排序，收藏页面后回访能快速核对最新集数，减少漏看。</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-card__num">05</div>
+          <h4>推荐路径可延伸</h4>
+          <p>从一部番的卡片可以进入同题材、同制作公司或同声优的相关推荐，补番路径更顺。</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-card__num">06</div>
+          <h4>评论区补充判断</h4>
+          <p>评论保留不同意见，包括中评和吐槽，方便在观看前了解作品争议点。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section__head">
+        <h2 class="section__title" id="faq-title">常见问题</h2>
+        <p class="section__desc">围绕选番、追更和补番顺序整理的高频疑问。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>稀饭动漫适合什么阶段的动漫观众？</summary>
+          <div class="faq-item__body">从刚入坑到追更多年的观众都能用。刚入坑的可以看分类入口和短篇榜单，按题材和观看门槛筛选；老观众更适合直接看更新列表和深度解析，用集数对齐进度。页面没有设置观看门槛，但部分悬疑类作品会提示信息量较大，建议按提示选择。</div>
+        </details>
+        <details class="faq-item">
+          <summary>本季新番里先看哪一部比较稳妥？</summary>
+          <div class="faq-item__body">如果时间有限，可以先看《浮岛邮差与风之信》或《炉火与旧书店》。前者单元剧结构、单集完成度高，后者已完结、篇幅短，试错成本低。喜欢动作场面的观众可以选《赤刃列车》，但建议前 3 话连看，避免角色关系记混。</div>
+        </details>
+        <details class="faq-item">
+          <summary>页面上的评分和更新状态会变化吗？</summary>
+          <div class="faq-item__body">会。评分和短评会根据当季讨论情况调整，更新状态会随集数上线同步。新番首周评分通常波动较大，建议参考更新到中段后的评价。页面的更新列表按时间排序，回访时可以直接核对最新集数。</div>
+        </details>
+        <details class="faq-item">
+          <summary>补老番应该按什么顺序看？</summary>
+          <div class="faq-item__body">优先按作品自身的播出顺序看，续作和剧场版在延伸阅读里会单独标注。部分系列存在重制版和原版差异，页面会在深度解析中说明。如果只是体验风格，可以先看单集完成度高的短篇集，再决定是否补长篇。</div>
+        </details>
+        <details class="faq-item">
+          <summary>想找和某部番类似的作品，怎么筛选？</summary>
+          <div class="faq-item__body">可以从推荐卡片上的题材标签入手，比如奇幻、日常、悬疑，再到分类入口里看同标签下的其他作品。深度解析部分也会写同类作品比较，包括制作公司差异和节奏区别，适合看完一部后继续找番。</div>
+        </details>
+        <details class="faq-item">
+          <summary>为什么有些热门番没有出现在推荐里？</summary>
+          <div class="faq-item__body">推荐优先收录内容完成度较高、信息可核实的作品，部分讨论度高但评价分化明显的番会放在资讯或评论区讨论，而不是直接进主推荐位。页面也会随季度调整收录范围，后续可能补充。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ========== 用户评论 ========== -->
+    <section class="section" id="comments" aria-labelledby="comments-title">
+      <div class="section__head">
+        <h2 class="section__title" id="comments-title">社区评论 · 追番的人都在聊什么</h2>
+        <p class="section__desc">来自近期浏览者的真实感短评，包含推荐、中评和吐槽。</p>
+      </div>
+      <div class="comment-grid">
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">阿</span><span class="comment-card__name">阿澈_追番中</span><span class="comment-card__time">2026-11-06</span></div><p>《浮岛邮差》第七话终于开始讲主线了，前六话单元剧没白铺，情绪回收得挺舒服。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">小</span><span class="comment-card__name">小满不吃冰</span><span class="comment-card__time">2026-11-05</span></div><p>赤刃列车的打戏是真的密，但前三话人物太多，我隔了一周再看差点没对上号，建议连着补。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">夜</span><span class="comment-card__name">夜航星</span><span class="comment-card__time">2026-11-05</span></div><p>星屑观测日记的配乐比预期好，天文社的日常写得不悬浮，睡前看一集刚刚好。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">旧</span><span class="comment-card__name">旧书店常客</span><span class="comment-card__time">2026-11-04</span></div><p>炉火与旧书店完结了，最终话有点仓促，不过整体台词质量在线，还是愿意给个高分。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">雾</span><span class="comment-card__name">雾港观察员</span><span class="comment-card__time">2026-11-03</span></div><p>雾港调查录的线索铺得细，第五话那个证词明显有问题，希望后面别圆不回来。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">花</span><span class="comment-card__name">花剑不花</span><span class="comment-card__time">2026-11-03</span></div><p>花与剑的美术很稳，但感情线推进太慢了，第八话才有一点实感，急性子可能会弃。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">甜</span><span class="comment-card__name">甜品部编外</span><span class="comment-card__time">2026-11-02</span></div><p>街角甜品部这种日常番就是图个放松，剧情没什么起伏，但看完心情不错，适合下饭。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">深</span><span class="comment-card__name">深蓝听众</span><span class="comment-card__time">2026-11-02</span></div><p>深蓝回声第一话信息量有点大，第二话反而稳住了，先收藏观察几集再说。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">纸</span><span class="comment-card__name">纸飞机飞走了</span><span class="comment-card__time">2026-11-01</span></div><p>纸飞机计划第九话插入回忆篇，节奏慢下来了，不过对理解主角动机有帮助，不算水。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">风</span><span class="comment-card__name">风蚀塔下</span><span class="comment-card__time">2026-10-31</span></div><p>风蚀之塔的世界观说明集中在第四话，能接受设定讲解的会喜欢，只想看冒险的可能会急。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">路</span><span class="comment-card__name">路过看番</span><span class="comment-card__time">2026-10-30</span></div><p>这个页面的更新列表挺实用的，集数标的清楚，比我自己去几个地方翻省事。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">半</span><span class="comment-card__name">半糖去冰</span><span class="comment-card__time">2026-10-29</span></div><p>希望分类里能再加一个「续作」标签，每季找第二季第三季太费劲了。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">隐</span><span class="comment-card__name">隐世咸鱼</span><span class="comment-card__time">2026-10-28</span></div><p>深度解析写得比评分有用，至少会告诉你是作画好还是剧情好，不是一句话吹。</p></div>
+        <div class="comment-card"><div class="comment-card__head"><span class="avatar">一</span><span class="comment-card__name">一叶知秋</span><span class="comment-card__time">2026-10-27</span></div><p>赤刃列车第九话隧道那场分镜确实帅，但文戏还是有点赶，希望后面别只靠打戏。</p></div>
+      </div>
+    </section>
+
+    <!-- ========== 相关资讯 ========== -->
+    <section class="section" id="news" aria-labelledby="news-title">
+      <div class="section__head">
+        <h2 class="section__title" id="news-title">动漫资讯 · 近期动态</h2>
+        <p class="section__desc">更新、口碑、制作相关消息，帮助判断追更顺序。</p>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <span class="news-card__date">2026-11-07</span>
+          <h3 class="news-card__title">秋季新番中段口碑观察：日常系整体评分回升</h3>
+          <p class="news-card__desc">进入中段后，慢热日常番的评分普遍上浮，《浮岛邮差与风之信》和《星屑观测日记》讨论度提升。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-card__date">2026-11-06</span>
+          <h3 class="news-card__title">《赤刃列车》第九话作画引发讨论</h3>
+          <p class="news-card__desc">隧道场景的分镜和动作密度成为近期热门截图来源，文戏篇幅偏少也带来一些争议。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-card__date">2026-11-05</span>
+          <h3 class="news-card__title">《炉火与旧书店》完结，短篇集模式受关注</h3>
+          <p class="news-card__desc">全 10 话完结后，单话完成度高的短篇结构被不少观众列为补番首选。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-card__date">2026-11-04</span>
+          <h3 class="news-card__title">《雾港调查录》新增线索引推理党逐帧分析</h3>
+          <p class="news-card__desc">第五话雨夜证词中的细节被观众反复讨论，页面评论区和资讯流同步更新了相关观点。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-card__date">2026-11-03</span>
+          <h3 class="news-card__title">古风奇幻《花与剑的回声》美术特辑释出</h3>
+          <p class="news-card__desc">官方公开部分场景美术设定，页面深度解析同步补充了制作公司与风格说明。</p>
+        </article>
+        <article class="news-card">
+          <span class="news-card__date">2026-11-02</span>
+          <h3 class="news-card__title">稀饭动漫更新追踪功能调整，集数标注更清晰</h3>
+          <p class="news-card__desc">更新列表新增集数状态标签，方便追更观众快速核对进度，分类入口也做了排序优化。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== 订阅 ========== -->
+    <section class="subscribe" aria-labelledby="sub-title">
+      <div>
+        <h3 id="sub-title">订阅稀饭动漫追番提醒</h3>
+        <p>新番上线、集数更新和深度解析发布时，第一时间收到整理好的内容。</p>
+      </div>
+      <form onsubmit="return false">
+        <input type="email" placeholder="输入邮箱接收更新提醒" aria-label="邮箱">
+        <button type="button">订阅</button>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<!-- ========== 页脚 ========== -->
+<footer class="site-footer">
+  <div class="w-site">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/#top">
+          <span class="brand__mark">稀</span>
+          <span>稀饭动漫<span class="brand__sub">XIFAN ANIME</span></span>
+        </a>
+        <p>专注番剧推荐、更新追踪与内容解析的动漫专题站，帮助观众在有限时间里找到合适自己的作品。</p>
+      </div>
+      <div class="footer-col">
+        <h5>内容入口</h5>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#updates">新番更新</a>
+        <a href="/#category">分类浏览</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div class="footer-col">
+        <h5>社区互动</h5>
+        <a href="/#comments">用户评论</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#news">动漫资讯</a>
+        <a href="/#guide">浏览指南</a>
+      </div>
+      <div class="footer-col">
+        <h5>友情链接</h5>
+        <a href="/#top">番剧资料库</a>
+        <a href="/#top">季度新番表</a>
+        <a href="/#top">追番日历</a>
+        <a href="/#top">动漫社区</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 稀饭动漫 · 内容仅供浏览参考，具体播出信息以官方为准</span>
+      <span>免责声明：页面内容为编辑整理与用户观点，不构成任何观看或消费建议</span>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+                                                                </html>
