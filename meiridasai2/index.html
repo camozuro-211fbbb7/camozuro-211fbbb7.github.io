@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日大赛r星-每日大赛r星怎么参加_每日大赛r星赛事规则与参赛指南</title>
+<meta name="description" content="每日大赛r星是围绕每日赛事、参赛规则、赛道玩法与榜单追踪整理的内容专题，覆盖每日大赛r星报名方式、比赛节奏、评分标准、热门赛道推荐与常见问题，帮助参赛者和观赛用户快速了解每日大赛r星怎么参加、看什么、怎么追榜。">
+<meta name="keywords" content="每日大赛r星,每日大赛r星怎么参加,每日大赛r星规则,每日大赛r星榜单,每日大赛r星赛道">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23101826'/><path d='M18 44 L32 16 L46 44 Z' fill='%236ee7ff'/><circle cx='32' cy='38' r='5' fill='%23ffd166'/></svg>">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#0b1220;
+  --bg-soft:#111c2e;
+  --panel:#152238;
+  --panel-2:#1b2b45;
+  --line:rgba(120,160,220,.16);
+  --txt:#e8f0fb;
+  --txt-2:#a9bcd8;
+  --txt-3:#7d92b3;
+  --cyan:#6ee7ff;
+  --gold:#ffd166;
+  --pink:#ff7ab6;
+  --green:#5ee0a8;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --max:1200px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:
+    radial-gradient(900px 420px at 12% -8%,rgba(110,231,255,.13),transparent 60%),
+    radial-gradient(760px 380px at 92% 0%,rgba(255,122,182,.10),transparent 60%),
+    var(--bg);
+  color:var(--txt);
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 12px}
+ul{margin:0;padding-left:18px}
+
+/* ---------- 顶部导航 ---------- */
+.hd-top{
+  position:sticky;top:0;z-index:50;
+  background:rgba(11,18,32,.86);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.hd-inner{display:flex;align-items:center;gap:18px;padding:12px 0;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+.logo-mark{
+  width:34px;height:34px;border-radius:10px;flex:0 0 auto;
+  background:conic-gradient(from 210deg,#6ee7ff,#7b8cff,#ff7ab6,#ffd166,#6ee7ff);
+  display:grid;place-items:center;font-size:13px;color:#0b1220;font-weight:900;
+}
+.logo-txt b{font-size:17px}
+.logo-txt span{display:block;font-size:11px;color:var(--txt-3);font-weight:500;letter-spacing:1px}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.nav-links a{
+  font-size:13.5px;color:var(--txt-2);padding:7px 11px;border-radius:9px;
+  border:1px solid transparent;transition:.18s;white-space:nowrap;
+}
+.nav-links a:hover{color:#fff;background:var(--panel);border-color:var(--line)}
+.nav-hot{color:var(--gold)!important}
+.top-search{display:flex;align-items:center;gap:8px}
+.top-search input{
+  width:170px;background:var(--panel);border:1px solid var(--line);color:var(--txt);
+  border-radius:9px;padding:8px 10px;font-size:13px;outline:none;
+}
+.top-search input:focus{border-color:rgba(110,231,255,.5)}
+.top-search button{
+  background:linear-gradient(135deg,#2aa8c9,#5f7bff);border:0;color:#fff;
+  padding:8px 13px;border-radius:9px;font-size:13px;cursor:pointer;font-weight:600;
+}
+
+/* ---------- Banner ---------- */
+.banner{
+  margin-top:22px;border-radius:22px;overflow:hidden;position:relative;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(700px 300px at 85% 10%,rgba(255,209,102,.14),transparent 62%),
+    linear-gradient(155deg,#132038 0%,#0f1a2c 55%,#152238 100%);
+  box-shadow:var(--shadow);
+}
+.banner-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:0}
+.banner-main{padding:36px 32px 32px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{
+  font-size:12px;padding:4px 10px;border-radius:99px;border:1px solid var(--line);
+  color:var(--txt-2);background:rgba(110,231,255,.06);
+}
+.badge.gold{color:var(--gold);border-color:rgba(255,209,102,.32);background:rgba(255,209,102,.08)}
+.badge.pink{color:var(--pink);border-color:rgba(255,122,182,.3);background:rgba(255,122,182,.08)}
+h1.banner-title{font-size:34px;letter-spacing:.5px}
+h1.banner-title em{font-style:normal;color:var(--cyan)}
+.banner-sub{color:var(--txt-2);margin-top:12px;font-size:14.5px;max-width:640px}
+.banner-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn-primary{
+  background:linear-gradient(135deg,#5ee0a8,#2aa8c9);color:#062018;font-weight:800;
+  padding:11px 20px;border-radius:11px;font-size:14px;border:0;cursor:pointer;
+}
+.btn-ghost{
+  border:1px solid var(--line);color:var(--txt);padding:11px 20px;border-radius:11px;
+  font-size:14px;background:rgba(255,255,255,.02);cursor:pointer;
+}
+.banner-search{
+  margin-top:22px;display:flex;gap:8px;max-width:520px;
+  background:rgba(9,15,26,.7);border:1px solid var(--line);border-radius:13px;padding:6px;
+}
+.banner-search input{
+  flex:1;background:transparent;border:0;outline:none;color:var(--txt);
+  padding:8px 10px;font-size:14px;
+}
+.banner-search button{
+  background:linear-gradient(135deg,#6ee7ff,#7b8cff);border:0;color:#071520;
+  font-weight:800;padding:9px 16px;border-radius:9px;cursor:pointer;font-size:13.5px;
+}
+.quick-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.quick-tags a{
+  font-size:12.5px;color:var(--txt-2);border:1px dashed var(--line);
+  padding:4px 10px;border-radius:99px;transition:.18s;
+}
+.quick-tags a:hover{color:var(--cyan);border-color:rgba(110,231,255,.4)}
+.banner-side{
+  border-left:1px solid var(--line);padding:26px 24px;
+  background:linear-gradient(180deg,rgba(110,231,255,.05),transparent 70%);
+  display:flex;flex-direction:column;gap:14px;
+}
+.side-title{font-size:13px;color:var(--txt-3);letter-spacing:2px}
+.side-stat{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.stat-box{
+  background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;
+  padding:11px 12px;
+}
+.stat-box b{display:block;font-size:19px;color:var(--cyan)}
+.stat-box span{font-size:11.5px;color:var(--txt-3)}
+.side-list{display:flex;flex-direction:column;gap:9px;margin-top:2px}
+.side-list a{
+  display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--txt-2);
+  padding:8px 10px;border-radius:9px;background:rgba(255,255,255,.025);
+  border:1px solid transparent;transition:.18s;
+}
+.side-list a:hover{border-color:var(--line);color:#fff}
+.side-list a span{color:var(--gold);font-size:12px}
+
+/* ---------- 通用 Section ---------- */
+section{margin-top:42px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.sec-head h2{font-size:22px;letter-spacing:.4px;display:flex;align-items:center;gap:10px}
+.sec-head h2::before{
+  content:"";width:6px;height:20px;border-radius:4px;
+  background:linear-gradient(180deg,var(--cyan),#7b8cff);
+}
+.sec-head .sec-desc{font-size:13px;color:var(--txt-3);max-width:640px}
+.more-link{font-size:13px;color:var(--cyan)}
+
+/* ---------- 内容简介 ---------- */
+.intro-box{
+  background:linear-gradient(160deg,var(--panel),rgba(17,28,46,.6));
+  border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;
+}
+.intro-box h3{font-size:17px;margin-bottom:10px;color:var(--gold)}
+.intro-box p{color:var(--txt-2);font-size:14.5px}
+.intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.intro-cell{
+  border:1px solid var(--line);border-radius:12px;padding:14px;background:rgba(255,255,255,.02);
+}
+.intro-cell b{color:var(--cyan);font-size:13.5px;display:block;margin-bottom:4px}
+.intro-cell span{font-size:13px;color:var(--txt-2)}
+
+/* ---------- 推荐卡片 ---------- */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rec-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px;transition:.2s;display:flex;flex-direction:column;gap:9px;
+}
+.rec-card:hover{transform:translateY(-4px);border-color:rgba(110,231,255,.32);box-shadow:var(--shadow)}
+.rec-cover{
+  height:104px;border-radius:11px;position:relative;overflow:hidden;
+  border:1px solid var(--line);
+  display:grid;place-items:center;font-weight:800;color:rgba(255,255,255,.92);
+  font-size:15px;letter-spacing:1px;text-shadow:0 2px 12px rgba(0,0,0,.4);
+}
+.rec-cover::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 8px,transparent 8px 16px)}
+.rc-a{background:linear-gradient(135deg,#1e3a5f,#2aa8c9)}
+.rc-b{background:linear-gradient(135deg,#3a1e4f,#a45cff)}
+.rc-c{background:linear-gradient(135deg,#4f2a1e,#ff9a5c)}
+.rc-d{background:linear-gradient(135deg,#1e4f3a,#5ee0a8)}
+.rc-e{background:linear-gradient(135deg,#4f1e33,#ff7ab6)}
+.rc-f{background:linear-gradient(135deg,#2a3f4f,#7fb6ff)}
+.rec-card h3{font-size:15.5px}
+.rec-tags{display:flex;gap:6px;flex-wrap:wrap}
+.rec-tags i{
+  font-style:normal;font-size:11.5px;padding:2px 8px;border-radius:99px;
+  color:var(--txt-2);background:rgba(255,255,255,.05);border:1px solid var(--line);
+}
+.rec-desc{font-size:13px;color:var(--txt-2);flex:1}
+.rec-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--txt-3);border-top:1px dashed var(--line);padding-top:8px}
+.rec-meta b{color:var(--gold);font-weight:700}
+
+/* ---------- 最新更新 ---------- */
+.upd-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.upd-item{
+  display:flex;gap:12px;padding:14px;border-radius:12px;background:var(--panel);
+  border:1px solid var(--line);transition:.18s;
+}
+.upd-item:hover{border-color:rgba(94,224,168,.32);transform:translateX(3px)}
+.upd-date{
+  flex:0 0 52px;text-align:center;border-right:1px solid var(--line);padding-right:10px;
+}
+.upd-date b{display:block;font-size:17px;color:var(--cyan)}
+.upd-date span{font-size:11px;color:var(--txt-3)}
+.upd-body h4{font-size:14px;margin-bottom:3px}
+.upd-body p{font-size:12.5px;color:var(--txt-3);margin:0}
+.upd-tag{font-size:11px;color:var(--green);border:1px solid rgba(94,224,168,.3);padding:1px 7px;border-radius:99px;margin-left:6px}
+
+/* ---------- 分类入口 ---------- */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-item{
+  border:1px solid var(--line);border-radius:13px;padding:16px;background:rgba(255,255,255,.022);
+  transition:.18s;
+}
+.cat-item:hover{background:rgba(110,231,255,.07);border-color:rgba(110,231,255,.3)}
+.cat-item b{display:block;font-size:14.5px;margin-bottom:4px}
+.cat-item span{font-size:12.5px;color:var(--txt-3)}
+
+/* ---------- 深度解析正文 ---------- */
+.deep{
+  background:linear-gradient(170deg,var(--panel),rgba(15,26,44,.7));
+  border:1px solid var(--line);border-radius:var(--radius);padding:30px 32px;
+}
+.deep h3{font-size:18px;margin:22px 0 10px;color:var(--cyan)}
+.deep h3:first-child{margin-top:0}
+.deep p{color:var(--txt-2);font-size:14.5px;text-indent:0}
+.deep .quote{
+  border-left:3px solid var(--gold);padding:10px 16px;margin:16px 0;
+  background:rgba(255,209,102,.06);border-radius:0 10px 10px 0;color:var(--txt);font-size:14px;
+}
+
+/* ---------- 数据看板 ---------- */
+.dash{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.dash-card{
+  border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--panel);
+  text-align:center;
+}
+.dash-card b{display:block;font-size:24px;color:var(--cyan)}
+.dash-card span{font-size:12.5px;color:var(--txt-3)}
+
+/* ---------- 体验指南 ---------- */
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.guide-card{
+  border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--panel);
+}
+.guide-card b{display:flex;align-items:center;gap:8px;font-size:14.5px;margin-bottom:6px;color:var(--gold)}
+.guide-card p{font-size:13.5px;color:var(--txt-2);margin:0}
+
+/* ---------- FAQ ---------- */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq{
+  border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;padding:15px 18px;font-size:14.5px;font-weight:600;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--cyan);font-weight:800}
+details.faq[open] summary::after{content:"−"}
+details.faq .faq-a{padding:0 18px 16px;font-size:13.5px;color:var(--txt-2)}
+
+/* ---------- 评论 ---------- */
+.cmt-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmt{
+  border:1px solid var(--line);border-radius:13px;padding:14px;background:rgba(255,255,255,.022);
+}
+.cmt-head{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;display:grid;place-items:center;
+  font-size:12px;font-weight:800;color:#07131f;flex:0 0 auto;
+}
+.cmt-name{font-size:13.5px;font-weight:600}
+.cmt-time{font-size:11.5px;color:var(--txt-3);margin-left:auto}
+.cmt p{font-size:13.5px;color:var(--txt-2);margin:0}
+
+/* ---------- 资讯 ---------- */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.news-card{
+  border:1px solid var(--line);border-radius:13px;padding:16px;background:var(--panel);
+  transition:.18s;display:flex;flex-direction:column;gap:7px;
+}
+.news-card:hover{transform:translateY(-3px);border-color:rgba(255,209,102,.3)}
+.news-card h4{font-size:14.5px;line-height:1.5}
+.news-card p{font-size:12.8px;color:var(--txt-3);margin:0;flex:1}
+.news-date{font-size:11.5px;color:var(--gold)}
+
+/* ---------- 页脚 ---------- */
+footer{
+  margin-top:52px;border-top:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(17,28,46,.4),var(--bg));
+  padding:34px 0 26px;
+}
+.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:24px}
+.ft-brand p{font-size:13px;color:var(--txt-3);margin-top:10px;max-width:320px}
+.ft-col h5{font-size:13.5px;margin-bottom:10px;color:var(--txt)}
+.ft-col a{display:block;font-size:12.8px;color:var(--txt-3);padding:3px 0}
+.ft-col a:hover{color:var(--cyan)}
+.ft-bottom{
+  margin-top:24px;padding-top:16px;border-top:1px dashed var(--line);
+  font-size:12px;color:var(--txt-3);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:1000px){
+  .banner-grid{grid-template-columns:1fr}
+  .banner-side{border-left:0;border-top:1px solid var(--line)}
+  .card-grid,.news-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .dash{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  h1.banner-title{font-size:25px}
+  .banner-main{padding:26px 20px}
+  .card-grid,.news-grid,.upd-list,.cmt-list,.guide-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .top-search input{width:120px}
+  .deep{padding:22px 18px}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .intro-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= 导航 ================= -->
+<header class="hd-top">
+  <div class="wrap hd-inner">
+    <a class="logo" href="/#sec-home">
+      <span class="logo-mark">R★</span>
+      <span class="logo-txt"><b>每日大赛r星</b><span>R-STAR DAILY ARENA</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="/#sec-home">首页</a>
+      <a href="/#sec-hot">热门赛道</a>
+      <a href="/#sec-update">最新赛况</a>
+      <a href="/#sec-cat">分类入口</a>
+      <a href="/#sec-deep">规则解析</a>
+      <a href="/#sec-faq">常见问题</a>
+      <a href="/#sec-news">赛事资讯</a>
+      <a class="nav-hot" href="/#sec-rank">榜单速览</a>
+    </nav>
+    <div class="top-search">
+      <input type="text" placeholder="搜索赛道 / 赛题" aria-label="站内搜索">
+      <button type="button">搜索</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= 首屏 Banner ================= -->
+  <section id="sec-home" style="margin-top:0">
+    <div class="banner">
+      <div class="banner-grid">
+        <div class="banner-main">
+          <div class="badge-row">
+            <span class="badge gold">2026 赛季 · 第 45 周</span>
+            <span class="badge">每日开赛</span>
+            <span class="badge pink">实时榜单</span>
+            <span class="badge">新手可参加</span>
+          </div>
+          <h1 class="banner-title">每日大赛r星：<em>每天一场</em>，看懂赛制再上场</h1>
+          <p class="banner-sub">
+            每日大赛r星是围绕每日固定开赛、赛道轮换、积分榜单与赛题解析展开的内容专题。
+            这里整理每日大赛r星的参赛流程、评分逻辑、热门赛道和真实赛况，帮你把"看热闹"变成"看得懂"。
+          </p>
+          <p class="banner-sub">
+            从报名入口到赛题拆解，从榜单变化到选手复盘，一页读完每日大赛r星的核心信息，参赛者和围观党都能用得上。
+          </p>
+          <div class="banner-actions">
+            <button class="btn-primary" type="button">查看今日赛题</button>
+            <button class="btn-ghost" type="button">参赛流程速览</button>
+            <button class="btn-ghost" type="button">加入追榜提醒</button>
+          </div>
+          <div class="banner-search">
+            <input type="text" placeholder="输入赛道名、赛题编号或选手昵称…" aria-label="搜索每日大赛r星">
+            <button type="button">开始检索</button>
+          </div>
+          <div class="quick-tags">
+            <a href="/#sec-hot">今日热门赛道</a>
+            <a href="/#sec-rank">周榜变化</a>
+            <a href="/#sec-deep">评分标准</a>
+            <a href="/#sec-guide">新手怎么参加</a>
+            <a href="/#sec-faq">赛题难度</a>
+            <a href="/#sec-update">今日开赛时间</a>
+            <a href="/#sec-cat">赛道分类</a>
+            <a href="/#sec-news">赛事动态</a>
+          </div>
+        </div>
+        <aside class="banner-side">
+          <div class="side-title">TODAY · 实时概览</div>
+          <div class="side-stat">
+            <div class="stat-box"><b>18</b><span>今日开放赛道</span></div>
+            <div class="stat-box"><b>2,460</b><span>今日参赛人次</span></div>
+            <div class="stat-box"><b>96.4</b><span>最高单场得分</span></div>
+            <div class="stat-box"><b>11-07</b><span>当前赛期日期</span></div>
+          </div>
+          <div class="side-title" style="margin-top:6px">正在进行的赛道</div>
+          <div class="side-list">
+            <a href="/#sec-hot">极速逻辑挑战 <span>剩 42 分钟</span></a>
+            <a href="/#sec-hot">即兴创意赛道 <span>剩 1 小时</span></a>
+            <a href="/#sec-hot">数据解读赛 <span>剩 2 小时</span></a>
+            <a href="/#sec-hot">新人热身场 <span>随时可进</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 内容简介 ================= -->
+  <section id="sec-intro">
+    <div class="sec-head">
+      <h2>每日大赛r星是什么：这个专题能帮你解决什么</h2>
+      <span class="sec-desc">先搞清楚内容定位，再决定是围观还是上场</span>
+    </div>
+    <div class="intro-box">
+      <h3>一个把"每日赛事"讲清楚的资料型专题</h3>
+      <p>
+        每日大赛r星的核心特征在于"每日"和"赛道"两个词：每天固定时间开赛，不同日期轮换不同的赛题方向，
+        参与者需要在有限时间内完成指定任务，由评分机制给出分数并进入榜单。
+        很多人第一次接触每日大赛r星时，最困惑的不是题目难不难，而是"我怎么参加""评分看什么""榜单为什么这样排"。
+        这个专题正是围绕这些问题展开，把分散在规则页、公告区和选手复盘里的信息整理成一条可读的路径。
+      </p>
+      <p>
+        本页面向三类受众：第一类是准备参赛的新手，想先弄清楚每日大赛r星的报名方式、设备要求和时间安排；
+        第二类是已经参赛但成绩不稳定的选手，希望从评分逻辑和赛道特点里找到提升方向；
+        第三类是纯观赛用户，喜欢看榜单变化、看高手复盘，把它当成一种轻量的日常内容消费。
+        三类人的关注点不同，但都能在同一套页面结构里找到对应入口。
+      </p>
+      <p>
+        页面提供的信息包括：赛道分类与难度分层、热门赛题的看点摘要、每日更新的赛况摘要、评分标准的拆解、
+        常见误区的提醒，以及一批真实语气的用户讨论。它不承诺"看完就能拿高分"，
+        但能让你在打开每日大赛r星的那一刻，知道自己该点哪里、看什么、避开哪些坑。
+        如果你打算长期关注，建议收藏本页，因为赛道轮换和规则微调会持续更新。
+      </p>
+      <div class="intro-grid">
+        <div class="intro-cell"><b>参赛者</b><span>看流程、看评分、看赛道难度，减少无效尝试。</span></div>
+        <div class="intro-cell"><b>观赛者</b><span>看榜单、看复盘、看赛题亮点，快速抓住重点。</span></div>
+        <div class="intro-cell"><b>内容读者</b><span>看解析、看评论、看资讯，理解赛事生态。</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 热门赛道推荐 ================= -->
+  <section id="sec-hot">
+    <div class="sec-head">
+      <h2>今日热门赛道推荐</h2>
+      <span class="sec-desc">按参与热度与完赛率综合排序，适合第一次上手的人挑一个先试</span>
+    </div>
+    <div class="card-grid">
+      <a class="rec-card" href="/#sec-rank">
+        <div class="rec-cover rc-a">极速逻辑</div>
+        <h3>极速逻辑挑战 · 第 312 期</h3>
+        <div class="rec-tags"><i>逻辑</i><i>限时</i><i>高完赛率</i></div>
+        <p class="rec-desc">20 分钟内完成 12 道递进式推理题，前 5 题送分，后 3 题拉开差距，适合练手速也练判断。</p>
+        <div class="rec-meta"><span>热度 <b>9,842</b></span><span>难度 ★★☆</span></div>
+      </a>
+      <a class="rec-card" href="/#sec-rank">
+        <div class="rec-cover rc-b">即兴创意</div>
+        <h3>即兴创意赛道 · 主题"城市夜行"</h3>
+        <div class="rec-tags"><i>创意</i><i>主观评分</i><i>可复投</i></div>
+        <p class="rec-desc">围绕给定主题提交一段短文本或方案，评委按完成度与原创性打分，重复提交取最高分。</p>
+        <div class="rec-meta"><span>热度 <b>7,516</b></span><span>难度 ★★★</span></div>
+      </a>
+      <a class="rec-card" href="/#sec-rank">
+        <div class="rec-cover rc-c">数据解读</div>
+        <h3>数据解读赛 · 图表找异常</h3>
+        <div class="rec-tags"><i>数据</i><i>客观题</i><i>适合进阶</i></div>
+        <p class="rec-desc">给出三组图表，要求定位异常区间并写出判断依据，客观分与理由分各占一半。</p>
+        <div class="rec-meta"><span>热度 <b>6,203</b></span><span>难度 ★★★☆</span></div>
+      </a>
+      <a class="rec-card" href="/#sec-rank">
+        <div class="rec-cover rc-d">新人热身</div>
+        <h3>新人热身场 · 每日常驻</h3>
+        <div class="rec-tags"><i>新手</i><i>不计排名</i><i>随时可进</i></div>
+        <p class="rec-desc">不计入正式榜单，题目难度平缓，主要用来熟悉每日大赛r星的答题界面与提交节奏。</p>
+        <div class="rec-meta"><span>热度 <b>5,880</b></span><span>难度 ★☆</span></div>
+      </a>
+      <a class="rec-card" href="/#sec-rank">
+        <div class="rec-cover rc-e">长文本</div>
+        <h3>长文本结构赛 · 三段式改写</h3>
+        <div class="rec-tags"><i>写作</i><i>结构</i><i>评分细</i></div>
+        <p class="rec-desc">把一段冗余文字压缩成三段结构，评分点包括信息保留率、逻辑顺序和语言简洁度。</p>
+        <div class="rec-meta"><span>热度 <b>4,927</b></span><span>难度 ★★★</span></div>
+      </a>
+      <a class="rec-card" href="/#sec-rank">
+        <div class="rec-cover rc-f">速算对抗</div>
+        <h3>速算对抗场 · 双人同题</h3>
+        <div class="rec-tags"><i>对抗</i><i>速度</i><i>直播可观战</i></div>
+        <p class="rec-desc">两名选手同题竞速，先答对者得分，适合喜欢强节奏和即时反馈的参与者。</p>
+        <div class="rec-meta"><span>热度 <b>4,310</b></span><span>难度 ★★★☆</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= 最新赛况 ================= -->
+  <section id="sec-update">
+    <div class="sec-head">
+      <h2>最新赛况与今日更新</h2>
+      <span class="sec-desc">截至 2026 年 11 月 7 日的赛道状态与结果摘要</span>
+    </div>
+    <div class="upd-list">
+      <div class="upd-item">
+        <div class="upd-date"><b>07</b><span>11月</span></div>
+        <div class="upd-body"><h4>极速逻辑挑战第 312 期已结算<span class="upd-tag">已结束</span></h4><p>最高分 96.4，平均分 71.2，后三题正确率不足四成，成为主要分差来源。</p></div>
+      </div>
+      <div class="upd-item">
+        <div class="upd-date"><b>07</b><span>11月</span></div>
+        <div class="upd-body"><h4>即兴创意赛道主题公布<span class="upd-tag">进行中</span></h4><p>本期主题"城市夜行"，提交窗口开放至今晚 22:00，支持一次修改重投。</p></div>
+      </div>
+      <div class="upd-item">
+        <div class="upd-date"><b>07</b><span>11月</span></div>
+        <div class="upd-body"><h4>数据解读赛新增"理由分"细则<span class="upd-tag">规则更新</span></h4><p>判断依据不足 30 字的答案，理由分按半分计，官方说明为鼓励完整表达。</p></div>
+      </div>
+      <div class="upd-item">
+        <div class="upd-date"><b>06</b><span>11月</span></div>
+        <div class="upd-body"><h4>周榜前十出现两处换位<span class="upd-tag">榜单</span></h4><p>连续参赛型选手积分反超，说明每日大赛r星的稳定性权重高于单场爆发。</p></div>
+      </div>
+      <div class="upd-item">
+        <div class="upd-date"><b>06</b><span>11月</span></div>
+        <div class="upd-body"><h4>新人热身场题库扩充至 240 题<span class="upd-tag">更新</span></h4><p>覆盖逻辑、速算与文本三类基础题型，不计排名，可反复练习。</p></div>
+      </div>
+      <div class="upd-item">
+        <div class="upd-date"><b>05</b><span>11月</span></div>
+        <div class="upd-body"><h4>长文本结构赛评分示例公开<span class="upd-tag">资料</span></h4><p>公布三份不同分数段答卷及点评，便于理解信息保留率与简洁度的取舍。</p></div>
+      </div>
+      <div class="upd-item">
+        <div class="upd-date"><b>05</b><span>11月</span></div>
+        <div class="upd-body"><h4>速算对抗场开放观战模式<span class="upd-tag">功能</span></h4><p>支持实时查看双方答题进度，观战不影响参赛，适合学习高手节奏。</p></div>
+      </div>
+      <div class="upd-item">
+        <div class="upd-date"><b>04</b><span>11月</span></div>
+        <div class="upd-body"><h4>11 月赛道日历发布<span class="upd-tag">日历</span></h4><p>本月共 26 个正式赛期，其中 8 场为全天可提交的弹性赛制。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 分类入口 ================= -->
+  <section id="sec-cat">
+    <div class="sec-head">
+      <h2>赛道分类入口</h2>
+      <span class="sec-desc">按能力方向划分，方便按自己的长板选择每日大赛r星赛题</span>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-item" href="/#sec-hot"><b>逻辑推理类</b><span>递进式题目，考察判断链条与排除能力</span></a>
+      <a class="cat-item" href="/#sec-hot"><b>速算对抗类</b><span>限时计算与双人竞速，节奏最紧凑</span></a>
+      <a class="cat-item" href="/#sec-hot"><b>创意表达类</b><span>主题写作与方案设计，主观评分占比高</span></a>
+      <a class="cat-item" href="/#sec-hot"><b>数据解读类</b><span>图表分析、异常定位与结论表述</span></a>
+      <a class="cat-item" href="/#sec-hot"><b>文本结构类</b><span>压缩、改写、信息保留率控制</span></a>
+      <a class="cat-item" href="/#sec-hot"><b>新人热身类</b><span>不计排名，熟悉流程与界面</span></a>
+      <a class="cat-item" href="/#sec-update"><b>弹性赛制类</b><span>全天可提交，适合时间不固定的人</span></a>
+      <a class="cat-item" href="/#sec-rank"><b>团队协作类</b><span>多人分工同题，考察配合与节奏</span></a>
+    </div>
+  </section>
+
+  <!-- ================= 榜单速览 ================= -->
+  <section id="sec-rank">
+    <div class="sec-head">
+      <h2>榜单速览与数据看板</h2>
+      <span class="sec-desc">用几个数字快速判断当前赛季的整体竞争强度</span>
+    </div>
+    <div class="dash">
+      <div class="dash-card"><b>2,460</b><span>今日参赛人次</span></div>
+      <div class="dash-card"><b>71.2</b><span>今日平均分</span></div>
+      <div class="dash-card"><b>96.4</b><span>今日最高分</span></div>
+      <div class="dash-card"><b>38%</b><span>后段题目正确率</span></div>
+    </div>
+    <div class="intro-box" style="margin-top:16px">
+      <h3>榜单为什么这样排：三个容易被忽略的权重</h3>
+      <p>
+        第一是稳定性。每日大赛r星的周榜采用累计积分而非单场最高分，连续参赛但每场中等偏上的选手，
+        往往排在单场爆发但缺席多场的选手前面。第二是完赛率，未在时限内提交的场次不计分，
+        部分赛道还要求写出过程，只有答案没有过程会被扣分。第三是难度系数，高难度赛道的单场分会被放大，
+        但失手代价同样放大，因此榜单中段的分数通常比想象中密集。
+      </p>
+      <p>
+        看榜时建议关注两个指标：近七场平均分和分差波动。平均分反映基本盘，波动反映状态是否稳定。
+        如果你的波动很大，说明对某类赛题依赖运气；如果波动很小但分数不高，说明需要针对性补短板。
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 深度解析正文 ================= -->
+  <section id="sec-deep">
+    <div class="sec-head">
+      <h2>深度解析：每日大赛r星到底在比什么</h2>
+      <span class="sec-desc">从赛制设计、评分逻辑到消费体验，拆开看这套每日赛事</span>
+    </div>
+    <div class="deep">
+      <h3>一、赛制设计：为什么是"每日"而不是"每周"</h3>
+      <p>
+        每日大赛r星最显眼的设计是高频开赛。相比每周一次的大型赛事，每日开赛把参与门槛压得很低：
+        你不需要为一场比赛专门空出半天，只需要在当天的窗口期内完成题目。
+        这种设计带来两个直接结果。其一是参与频次上升，用户容易形成"每天来看一眼"的习惯；
+        其二是单场权重下降，偶尔失手不会毁掉整个赛期，反而鼓励长期参与。
+        对内容读者来说，高频也意味着每天都有新的赛题、新的榜单变化和新的讨论素材，
+        这正是每日大赛r星能持续产出话题的原因。
+      </p>
+      <h3>二、评分逻辑：客观分与主观分如何共存</h3>
+      <p>
+        不同赛道采用不同评分方式。逻辑、速算这类赛道以客观分为主，答对即得分，错答不倒扣，
+        所以策略上"先拿稳分、再攻难题"通常更划算。创意、文本类赛道则引入主观评分，
+        由多个评分点组成，例如完成度、原创性、结构清晰度、语言简洁度。
+        这类赛道最容易出现的误解是"写得越多越好"，实际上多数评分细则对冗余表达是减分的。
+      </p>
+      <div class="quote">
+        一个实用的判断方法：如果你的答案在删掉三分之一后信息仍然完整，那原文大概率存在冗余，
+        在主观赛道里这会直接体现在简洁度评分上。
+      </div>
+      <h3>三、内容吸引点：赛题本身就是内容</h3>
+      <p>
+        每日大赛r星的赛题设计带有明显的"可讨论性"。比如数据解读赛给出的图表往往故意埋一处异常，
+        赛后复盘时大家会争论"这算不算异常"；创意赛道的主题词通常留有解释空间，
+        不同选手会给出完全不同的切入角度。这种开放性让赛题在结束后仍有讨论价值，
+        也让围观者能在不参赛的情况下获得阅读乐趣。对于内容站来说，这类素材天然适合做成解析、榜单和评论模块。
+      </p>
+      <h3>四、参赛者画像：三类人，三种打法</h3>
+      <p>
+        第一类是稳定型选手，几乎每天参加，分数中等偏上，靠累计积分排在榜单前列；
+        第二类是专精型选手，只打自己擅长的赛道，单场分数极高但总排名受参赛场次限制；
+        第三类是体验型用户，主要玩新人热身场，偶尔尝试正式赛道。
+        三类人的策略完全不同：稳定型要控制失误率，专精型要挑准赛道并保证完赛，
+        体验型则应优先熟悉界面和提交规则，避免因操作问题丢分。
+      </p>
+      <h3>五、节奏与消费体验：短窗口带来的紧张感</h3>
+      <p>
+        大多数赛道的窗口期在 20 分钟到 2 小时之间，这种短窗口是紧张感的主要来源。
+        它迫使参与者快速判断题目优先级，也放大了时间分配的重要性。
+        常见的时间陷阱是"卡在一道题上"，正确的做法是先扫一遍全部题目，标记出有把握的部分，
+        按性价比排序作答。对观赛用户而言，短窗口同样友好——你不需要长时间守着，
+        在结算前后看一次结果和复盘即可。
+      </p>
+      <h3>六、适合人群与同类比较</h3>
+      <p>
+        每日大赛r星适合喜欢轻量竞技、愿意每天投入固定时间、并且享受即时反馈的人。
+        如果你更偏好深度长周期项目，可能会觉得单场赛题偏浅；如果你追求强对抗和直播感，
+        双人对抗类赛道会更对味。与同类每日赛制相比，它的特点是赛道种类多、评分点写得细，
+        因此更适合"边看规则边试"的学习型参与者。
+      </p>
+      <h3>七、搜索这个词的人通常在找什么</h3>
+      <p>
+        从搜索意图看，搜"每日大赛r星"的人大致分三种：想知道怎么参加的人，关心入口、时间和资格；
+        想知道规则的人，关心评分、提交和名次计算；想找参考的人，关心赛题示例、复盘和榜单解读。
+        本页把这三类需求放在同一结构里，先给入口和流程，再给规则拆解，最后给讨论和资讯，
+        让不同阶段的读者都能快速定位到有用信息。
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 体验指南 ================= -->
+  <section id="sec-guide">
+    <div class="sec-head">
+      <h2>浏览与参赛体验指南</h2>
+      <span class="sec-desc">从打开页面到完成一场比赛，尽量少走弯路</span>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card"><b>① 先看今日赛道状态</b><p>首屏右侧的实时概览会标出正在进行和即将开始的赛道，剩余时间是判断能否赶上的第一依据。</p></div>
+      <div class="guide-card"><b>② 用分类缩小范围</b><p>不确定自己适合哪类赛题时，先按能力方向筛选，再从热门推荐里挑一个难度适中的进入。</p></div>
+      <div class="guide-card"><b>③ 读一遍评分细则</b><p>主观赛道尤其重要。评分点通常只有几百字，但直接决定你的作答结构，值得花两分钟读完。</p></div>
+      <div class="guide-card"><b>④ 先做完再优化</b><p>限时赛制下，完整提交的收益远高于局部完美。先保证所有题目有答案，再回头补强薄弱部分。</p></div>
+      <div class="guide-card"><b>⑤ 赛后看复盘</b><p>结算后的分差说明和评分示例是提升最快的信息源，比反复刷题更能暴露问题。</p></div>
+      <div class="guide-card"><b>⑥ 移动端注意节奏</b><p>手机端页面已做适配，但长文本类赛道建议在更大屏幕上作答，避免输入效率影响成绩。</p></div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="sec-faq">
+    <div class="sec-head">
+      <h2>常见问题</h2>
+      <span class="sec-desc">围绕参赛、规则与观看的高频疑问</span>
+    </div>
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>每日大赛r星怎么参加？需要提前报名吗？</summary>
+        <div class="faq-a">多数赛道在开赛窗口内直接进入即可，不需要提前很久报名，但部分团队赛道要求提前组队确认。建议先在"新人热身场"走一遍完整流程，熟悉提交按钮和倒计时，再参加正式赛道。第一次参赛时，优先选择标注"高完赛率"或"新手可参加"的赛道，避免因规则不熟导致空手而归。</div>
+      </details>
+      <details class="faq">
+        <summary>每日大赛r星的评分标准主要看什么？</summary>
+        <div class="faq-a">客观赛道看正确率，主观赛道看评分点。以文本结构类为例，评分通常拆成信息保留率、逻辑顺序、语言简洁度三项，任何一项明显缺失都会拉低总分。逻辑类赛道则更看重后段难题的区分度，前段题目分值低、后段分值高，时间分配不合理是失分主因。参赛前花两分钟读评分细则，收益通常高于多刷五道题。</div>
+      </details>
+      <details class="faq">
+        <summary>每天都有比赛吗？错过当天还能补吗？</summary>
+        <div class="faq-a">正式赛期基本每日一场，但并非所有赛道都每天开放，赛道按日历轮换。错过当天的正式赛道一般不能补赛，不过弹性赛制类赛道提供全天可提交的窗口，适合时间不固定的人。新人热身场是常驻的，不参与排名，可以随时用来练习。建议关注页面上的赛道日历，提前标记自己感兴趣的赛期。</div>
+      </details>
+      <details class="faq">
+        <summary>新手应该从哪个赛道开始？</summary>
+        <div class="faq-a">建议顺序是：新人热身场 → 极速逻辑挑战 → 长文本结构赛 → 数据解读赛。热身场用来熟悉界面，逻辑挑战的题目递进清晰、容错较高，文本结构赛能训练表达取舍，数据解读赛难度最高，放在最后。创意类赛道主观评分占比大，适合已经熟悉流程、想尝试不同风格的人，不建议作为第一场。</div>
+      </details>
+      <details class="faq">
+        <summary>榜单排名是怎么计算的？单场高分能冲榜吗？</summary>
+        <div class="faq-a">主流榜单采用累计积分，单场高分能提升排名，但参赛场次和稳定性权重更大。连续参赛、每场保持中上水平的选手，通常比单场爆发后长期缺席的选手排名更靠前。此外，未在时限内提交的场次不计分，高难度赛道有分数放大但也有失手风险。看榜时建议同时关注近七场平均分和分差波动两个指标。</div>
+      </details>
+      <details class="faq">
+        <summary>有没有类似每日大赛r星的赛事可以参考？</summary>
+        <div class="faq-a">同类每日赛制的共同点是高频开赛、赛道轮换和累计积分，差异主要在赛题深度与评分透明度。每日大赛r星的特点是把评分点写得比较细，并提供赛后评分示例，适合喜欢"边看规则边调整"的学习型参与者。如果你更偏好强对抗，双人竞速类赛道节奏更紧；如果偏好深度项目，可以关注周期更长的专题赛事。</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= 用户评论 ================= -->
+  <section id="sec-cmt">
+    <div class="sec-head">
+      <h2>用户讨论区</h2>
+      <span class="sec-desc">近 30 天内的真实语气评论，好坏都有</span>
+    </div>
+    <div class="cmt-list">
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#6ee7ff">林</span><span class="cmt-name">林间有雾</span><span class="cmt-time">11-06</span></div><p>极速逻辑后三题确实卡人，我时间全耗在第七题，结果第八题根本没看。下次先扫一遍再动笔。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ffd166">阿</span><span class="cmt-name">阿岚不加班</span><span class="cmt-time">11-06</span></div><p>即兴创意这个主题挺有意思，但主观评分波动有点大，同样的稿子两次提交分数差了不少。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ff7ab6">小</span><span class="cmt-name">小满在追榜</span><span class="cmt-time">11-05</span></div><p>周榜前十换位那两条我盯了半天，果然是连续参赛的选手反超，稳定性真的比爆发重要。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#5ee0a8">周</span><span class="cmt-name">周末打野</span><span class="cmt-time">11-05</span></div><p>新人热身场题库扩到 240 题之后好用了不少，至少不会刷两遍就全记住了。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#7b8cff">陈</span><span class="cmt-name">陈某人上线</span><span class="cmt-time">11-04</span></div><p>数据解读赛加理由分之后合理多了，之前有人只写个数字也能拿满分，现在至少要说清楚判断依据。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ff9a5c">旧</span><span class="cmt-name">旧书页</span><span class="cmt-time">11-04</span></div><p>长文本结构赛评分示例公开很良心，我对照自己那份看了半天，确实废话太多。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#6ee7ff">蓝</span><span class="cmt-name">蓝色橡皮</span><span class="cmt-time">11-03</span></div><p>整体不错，就是窗口期有的太短，上班族中午那场基本赶不上，希望多一点弹性赛制。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ffd166">洛</span><span class="cmt-name">洛川以北</span><span class="cmt-time">11-03</span></div><p>速算对抗开放观战之后我看了三场，高手节奏是真的快，前两题几乎不思考。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ff7ab6">南</span><span class="cmt-name">南风知意</span><span class="cmt-time">11-02</span></div><p>创意赛道主题"城市夜行"我写了个短场景，分数一般，但评论区讨论挺热闹，参与感还是有的。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#5ee0a8">木</span><span class="cmt-name">木子不木</span><span class="cmt-time">11-02</span></div><p>建议新手先打热身场，我第一次直接冲数据解读，题都没读完时间就到了。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#7b8cff">一</span><span class="cmt-name">一只咸鱼君</span><span class="cmt-time">11-01</span></div><p>榜单计算方式能不能再透明一点，感觉有时候分差很小但名次跳很多。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ff9a5c">许</span><span class="cmt-name">许愿不灵</span><span class="cmt-time">10-31</span></div><p>逻辑题质量稳定，后段难度确实有区分度，比一味堆题量的赛事好。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#6ee7ff">白</span><span class="cmt-name">白露未晞</span><span class="cmt-time">10-30</span></div><p>文本结构赛很有意思，压缩到规定字数还得保留信息，比想象中难。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ffd166">三</span><span class="cmt-name">三分钟热度</span><span class="cmt-time">10-29</span></div><p>连续参加了一周，分数没涨多少，但至少知道自己的短板在哪了。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#ff7ab6">栀</span><span class="cmt-name">栀子花下</span><span class="cmt-time">10-28</span></div><p>创意类评分主观性还是有点强，希望多公开几份不同分数段的样卷参考。</p></div>
+      <div class="cmt"><div class="cmt-head"><span class="avatar" style="background:#5ee0a8">远</span><span class="cmt-name">远山有信</span><span class="cmt-time">10-27</span></div><p>页面把赛道分类理得挺清楚，比以前在各种公告里翻规则省事多了。</p></div>
+    </div>
+  </section>
+
+  <!-- ================= 相关资讯 ================= -->
+  <section id="sec-news">
+    <div class="sec-head">
+      <h2>相关资讯</h2>
+      <span class="sec-desc">围绕赛制、赛道与榜单的近期动态</span>
+    </div>
+    <div class="news-grid">
+      <a class="news-card" href="/#sec-update">
+        <span class="news-date">2026-11-07</span>
+        <h4>11 月赛道日历公布：26 个正式赛期，弹性赛制增至 8 场</h4>
+        <p>本月赛道排布更偏向时间友好型，全天可提交的弹性场次明显增加。</p>
+      </a>
+      <a class="news-card" href="/#sec-deep">
+        <span class="news-date">2026-11-06</span>
+        <h4>评分细则微调：数据解读赛理由分门槛提高</h4>
+        <p>判断依据不足 30 字按半分计，官方称旨在鼓励完整表达。</p>
+      </a>
+      <a class="news-card" href="/#sec-rank">
+        <span class="news-date">2026-11-05</span>
+        <h4>周榜前十换位分析：稳定性权重再次显现</h4>
+        <p>连续参赛型选手积分反超，单场高分不再足以稳住名次。</p>
+      </a>
+      <a class="news-card" href="/#sec-hot">
+        <span class="news-date">2026-11-04</span>
+        <h4>长文本结构赛公开三份评分示例答卷</h4>
+        <p>覆盖高、中、低三个分数段，附编辑点评与修改建议。</p>
+      </a>
+      <a class="news-card" href="/#sec-guide">
+        <span class="news-date">2026-11-03</span>
+        <h4>新人热身场题库扩充至 240 题，覆盖三类基础题型</h4>
+        <p>不计排名，可反复练习，适合首次接触每日大赛r星的用户。</p>
+      </a>
+      <a class="news-card" href="/#sec-hot">
+        <span class="news-date">2026-11-02</span>
+        <h4>速算对抗场开放观战模式，可实时查看答题进度</h4>
+        <p>观战不影响参赛资格，适合学习高手的时间分配节奏。</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= 延伸阅读/订阅 ================= -->
+  <section id="sec-sub">
+    <div class="intro-box" style="display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap">
+      <div>
+        <h3 style="margin-bottom:6px">订阅每日大赛r星赛况提醒</h3>
+        <p style="margin:0;font-size:13.5px;color:var(--txt-2)">开赛提醒、榜单变化与赛题解析，按你的节奏推送，不做无意义打扰。</p>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn-primary" type="button">订阅更新</button>
+        <button class="btn-ghost" type="button">查看往期</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= 页脚 ================= -->
+<footer id="sec-footer">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="logo" style="margin-bottom:8px">
+          <span class="logo-mark">R★</span>
+          <span class="logo-txt"><b>每日大赛r星</b><span>R-STAR DAILY ARENA</span></span>
+        </div>
+        <p>围绕每日开赛、赛道轮换与积分榜单整理的内容专题，提供参赛流程、评分解析、榜单观察与用户讨论，帮助读者更高效地理解每日大赛r星。</p>
+      </div>
+      <div class="ft-col">
+        <h5>赛事栏目</h5>
+        <a href="/#sec-hot">热门赛道</a>
+        <a href="/#sec-update">最新赛况</a>
+        <a href="/#sec-rank">榜单速览</a>
+        <a href="/#sec-cat">赛道分类</a>
+      </div>
+      <div class="ft-col">
+        <h5>内容阅读</h5>
+        <a href="/#sec-deep">规则深度解析</a>
+        <a href="/#sec-guide">体验指南</a>
+        <a href="/#sec-faq">常见问题</a>
+        <a href="/#sec-news">相关资讯</a>
+      </div>
+      <div class="ft-col">
+        <h5>友情链接</h5>
+        <a href="/#sec-home">专题首页</a>
+        <a href="/#sec-cmt">用户讨论区</a>
+        <a href="/#sec-sub">订阅提醒</a>
+        <a href="/#sec-footer">站点说明</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>© 2026 每日大赛r星内容专题 · 本站为信息整理与内容分享站点，赛制与规则请以官方发布为准。</span>
+      <span>内容更新日期：2026-11-07 · 免责声明：页面数据为模拟整理，仅供参考。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+        </html>
